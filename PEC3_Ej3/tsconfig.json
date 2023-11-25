@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es2015",  //Define la versión de ECMAScript (JavaScript) hacia la cual se compilará el código. Puede ser 'es5', 'es2015', 'es2022', entre otros. En este caso la versión es 'es2015'.
+    "module": "commonjs",  //Especifica el sistema de módulos que el compilador utilizará en los archivos .js de salida. Puede ser 'commonJS', 'es2015', 'ESnext', etc. En este caso se utiliza 'commonJS' porque se desea, por ejemplo, importar módulos mediante require(...) o exportar mediante module.exports = {...}.
+    "outDir": "./dist",  //Indica el directorio de salida donde se colocarán los archivos JavaScript después de la compilación. 
+    "rootDir": "./src",  //Define el directorio raíz desde el cual se incluirán los archivos de entrada. Es útil para mantener la estructura de directorios en la salida.
+    "strict": true, //Activa todas las opciones de "modo estricto" en TypeScript. Puede ser true o false. En este caso, se establecen las 7 opciones a true: 'noImplicitAny' (obliga a asignar tipos de datos), 'noImplicitThis' (evita el uso de 'this' dentro de una función), 'alwaysStrict' (aplica 'use strict' en el archivo), 'strictBindCallApply' (evita ciertos errores lógicos de código como la suma de 'string' y 'number'. Ej: 1 + '2'), 'strictNullChecks' (evita asignar 'null' o 'undefined' a una variable con tipo asignado previamente), 'strictFunctionTypes', 'strictPropertyInitialization' (obliga a asignar valores a las propiedades de una clase).
+    "incremental": true,  //Habilita la compilación incremental, guardando información de las compilaciones de archivos en el disco para acelerar el proceso si no hay cambios significativos. Esto crea una serie de archivos '.tsbuildinfo' en la misma carpeta que el resultado de la compilación. Puede ser true o false.
+    "tsBuildInfoFile": "./buildcache",  //Especifica la ubicación del archivo que almacena información de la compilación incremental.
+  }
+}
